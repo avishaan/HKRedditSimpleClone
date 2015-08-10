@@ -9,11 +9,11 @@ Template.postSubmit.events({
     Meteor.call('postInsert', post, function(err, result) {
       // display error to user and abort
       if (err)
-        return alert(err.reason);
+        return throwError(err.reason);
 
       // show this result but route anyway
       if (result.postExists)
-        alert('This link has laready been posted');
+        throwError('This link has laready been posted');
 
       Router.go('postPage', {_id: result._id});
 
