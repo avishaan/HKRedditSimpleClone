@@ -1,8 +1,8 @@
-*** HK/Reddit Clonish
+### HK/Reddit Clonish
 
 Clone built with MeteorJS
 
-** Mobile Responsive
+## Mobile Responsive
 
 Mobile Responsive
 ![alt text](./public/redditMobileresponsive.png "Mobile Responsive Screenshot")
