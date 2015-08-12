@@ -8,6 +8,12 @@
 
 Template.postsList.onRendered(function() {
   this.find('.wrapper')._uihooks = {
+    insertElement: function(node, next) {
+      $(node)
+      .hide()
+      .insertBefore(next)
+      .fadeIn();
+    },
     moveElement: function(node, next) {
       var $node = $(node); //element being moved to new dom position
       var $next = $(next); //element right after the new position node is being moved to
