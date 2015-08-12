@@ -14,6 +14,12 @@ Template.postsList.onRendered(function() {
       .insertBefore(next)
       .fadeIn();
     },
+    removeElement: function(node) {
+      $(node)
+      .fadeOut(function() {
+        $(node).remove();
+      })
+    },
     moveElement: function(node, next) {
       var $node = $(node); //element being moved to new dom position
       var $next = $(next); //element right after the new position node is being moved to
